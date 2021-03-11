@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    声明Student对象
+        给属性赋值
+        简单类型：spring中java的基本类型和string都是简单类型
+        1.set注入（设值注入）：spring调用类的set方法
+            简单类型的set注入：
+                <bean id="" class="">
+                    <property name="属性名字" value="此属性的值"/>
+                    一个property只能给一个属性赋值
+                    <property name="属性名字" value="此属性的值"/>
+                </bean>
+         2.引用类型的set注入
+                <bean id="" class="">
+                    <property name="属性名称" ref="bean的id(对象的名称)"/>
+                </bean>
+
+    -->
+    <bean id="myStudent" class="com.ywc.bao2.Student">
+        <property name="name" value="李四"/>
+        <property name="age" value="26"/>
+        <!--引用类型的赋值  ref ="对象名称"-->
+        <property name="school" ref="mySchool"/>
+    </bean>
+
+
+    <!--声明School对象-->
+    <bean id="mySchool" class="com.ywc.bao2.School">
+        <property name="name" value="北京大学"/>
+        <property name="address" value="北京海淀区"/>
+    </bean>
+</beans>

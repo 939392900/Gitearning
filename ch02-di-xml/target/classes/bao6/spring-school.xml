@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--School模块的所有bean声明-->
+    <bean id="mySchool" class="com.ywc.bao6.School">
+        <property name="name" value="人民大学"/>
+        <property name="address" value="北京海淀区"/>
+    </bean>
+
+
+</beans>
